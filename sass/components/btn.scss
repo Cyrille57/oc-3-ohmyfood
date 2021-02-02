@@ -31,6 +31,10 @@
     i {
         margin-left: 4.6%;
         color: #7e7e7e;
+
+        &:hover{
+            color:$primary-color;
+        }
     }
 
     p {
@@ -57,4 +61,19 @@
         }
 
     }
+}
+
+
+@mixin order__button{
+    width: 185px;
+    height: 47px;
+    margin-top: 8.5%;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    background: linear-gradient(176deg, $secondary-color 3%, $primary-color 120%);
+    border: none;
+    border-radius: 35px;
+    box-shadow: 0px 3px 5px rgb(195, 195, 196);
 }

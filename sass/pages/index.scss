@@ -11,11 +11,14 @@
 }
 
 h1,
+.restaurant__name,
 .footer-title {
+    /* Police pour h1 et .footer-tittle */
     font-family: "Shrikhand", cursive, "Arial", "Verdana", "sans-serif";
 }
 
 .link-list {
+    /* Enleve les puces sur la liste */
     list-style: none;
 }
 
@@ -30,8 +33,8 @@ h1,
 /* *************************************** */
 
 
-/* ***** Parametre de la boite invisible pour title et location ***** */
 .invisible-box-header {
+    /* Parametre de la boite invisible */
 
 
     @media only screen and (max-width: 479px) {
@@ -46,6 +49,7 @@ h1,
     }
 
     .title {
+        /* Parametre du titre */
         width: 100%;
         height: 62px;
         margin-top: 0%;
@@ -58,6 +62,7 @@ h1,
     }
 
     .location {
+        /* Parametre du lieu */
         width: 100%;
         height: 45px;
 
@@ -68,6 +73,7 @@ h1,
         background-color: #eaeaea;
 
         .location__icon {
+            /* Parametre de l'icone du lieu */
             width: 10%;
             height: 47px;
 
@@ -77,17 +83,17 @@ h1,
         }
 
         .location__text {
+            /* Parametre du texte du lieu */
             width: 42%;
             height: 47px;
 
-            font-size: 18px;
-
             display: flex;
             align-items: center;
+
+            font-size: 18px;
         }
     }
 }
-
 
 
 /* *************************************** */
@@ -100,7 +106,8 @@ h1,
 /* *************************************** */
 
 
-.invisible-box-section-1 {
+.section-1__invisible-box {
+    /* Parametre de la boite invisible */
 
     @media only screen and (max-width: 479px) {
         max-width: 479px;
@@ -109,35 +116,37 @@ h1,
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        h2 {
+            /* Parametre du h2 */
+            max-width: 235px;
+            margin-top: 9.5%;
+
+            text-align: center;
+            font-weight: 900;
+        }
+
+        p {
+            /* Parametre de p */
+            max-width: 300px;
+            margin-top: 4.3%;
+
+            text-align: center;
+            font-weight: 300;
+        }
+
+        button {
+            /* Parametre du boutton voir btn.scss */
+            @include button_section1
+        }
+
+        a {
+            /* Parametre du lien */
+            text-decoration: none;
+            color: white;
+        }
     }
 
-    .section1__title {
-        max-width: 235px;
-        margin-top: 9.5%;
-
-        text-align: center;
-        font-weight: 900;
-    }
-
-    .section1__text {
-        max-width: 300px;
-        margin-top: 4.3%;
-
-        text-align: center;
-        font-weight: 300;
-    }
-}
-
-
-.section1__button {
-
-    @media only screen and (max-width: 479px) {
-        @include button_section1
-    }
-    a{
-        text-decoration: none;
-        color: white;
-    }
 }
 
 
@@ -147,6 +156,7 @@ h1,
 
 
 .invisible-box-section-2 {
+    /* Parametre de la boite invisible */
 
     @media only screen and (max-width: 479px) {
         max-width: 479px;
@@ -156,27 +166,22 @@ h1,
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-    }
-}
 
-.box-button {
+        .box-button {
+            /* Parametre de la boite pour les bouttons de fonctionnement */
+            max-width: 479px;
+            height: 310px;
+            margin: 0 auto;
 
-    @media only screen and (max-width: 479px) {
-        max-width: 479px;
-        height: 310px;
-        margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.button {
-
-    @media only screen and (max-width: 479px) {
-
-        @include button_operation
+        .button {
+            /* Parametre du boutton voir btn.scss */
+            @include button_operation
+        }
     }
 }
 
@@ -185,7 +190,9 @@ h1,
 /* ************* Section 3 *************** */
 /* *************************************** */
 
+
 .invisible-box-section-3 {
+    /* Parametre de la boite invisible */
 
     @media only screen and (max-width: 479px) {
 
@@ -199,12 +206,14 @@ h1,
         background-color: #f6f6f6;
 
         h2 {
+            /* Parametre du h2 */
             margin-top: 14%;
         }
     }
 }
 
 .box-card {
+    /* Parametre de la boite pour les cartes */
 
     @media only screen and (max-width: 479px) {
         max-width: 479;
@@ -216,119 +225,23 @@ h1,
         align-items: center;
         justify-content: space-between;
 
-
-    }
-}
-
-.card {
-    @media only screen and (max-width: 479px) {
-        width: 335px;
-        height: 250px;
-
-        border-radius: 15px;
-        box-shadow: 0px 3px 5px rgb(195, 195, 196);
-
-        a {
-            width: 335px;
-            height: 250px;
-
-            display: block;
-
-            text-decoration: none;
-
-            border-radius: 15px;
-        }
-
-        &__picture {
-            width: 335px;
-            height: 173px;
-            border-radius: 15px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 15px 15px 0px 0px;
-            }
-
-        }
-
-        &__label {
-            width: 80px;
-            height: 29px;
-
-            position: relative;
-            bottom: 95%;
-            left: 73%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            font-size: 12px;
-            font-weight: 500;
-            color: #008766;
-
-            border-radius: 3px;
-
-            background-color: #99e2d0;
-
-        }
-
-        &__box-info {
-            width: 100%;
-            height: 77px;
-            background-color: white;
-            border-radius: 15px;
-
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        &__info-title {
-            width: 60%;
-            margin-top: 4.8%;
-            margin-left: 14px;
-
-            color: black;
-
-            h3 {
-                font-weight: 500;
-            }
-
-            p {
-                font-weight: 300;
-                margin-top: 3%;
-            }
-        }
-
-        &__info-icon {
-            width: 20%;
-
-            display: flex;
-
-            i {
-                margin-top: 22px;
-                margin-left: 26%;
-                font-size: 26px;
-                color: black;
-
-            }
-
+        .card {
+            /* Parametre de carte voir card.scss */
+            @include card
         }
 
     }
 }
-
-
 
 
 /* *************************************** */
 /* *************** Footer **************** */
 /* *************************************** */
 
+
 footer {
+    /* Parametre de la boite invisible */
+
     @media only screen and (max-width: 479px) {
 
         height: 197px;
@@ -337,10 +250,13 @@ footer {
         background-color: #353535;
 
         h2 {
+            /* Parametre du h2 */
             margin-left: 6%;
+            margin-top: 4%;
         }
 
         .link-list {
+            /* Parametre de la boite pour les li */
             height: 96px;
             margin-top: 4%;
             margin-left: 6%;
@@ -349,16 +265,19 @@ footer {
             justify-content: space-between;
 
             .link-list--margin-1 {
+                /* Parametre de la marge pour le premier li */
                 margin-left: 2%;
                 display: inline-block;
             }
 
             .link-list--margin-2 {
+                /* Parametre de la marge pour le second li */
                 margin-left: 0.2%;
                 display: inline-block;
             }
 
             a {
+                /* Parametre du lien */
                 color: white;
                 text-decoration: none;
             }
