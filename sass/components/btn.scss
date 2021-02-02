@@ -71,9 +71,15 @@
 
     font-size: 16px;
     font-weight: 500;
+    
 
     background: linear-gradient(176deg, $secondary-color 3%, $primary-color 120%);
     border: none;
     border-radius: 35px;
     box-shadow: 0px 3px 5px rgb(195, 195, 196);
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }
