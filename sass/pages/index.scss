@@ -35,18 +35,13 @@ h1,
 
 .invisible-box-header {
     /* Parametre de la boite invisible */
+    max-width: 479px;
+    height: 110px;
 
-
-    @media only screen and (max-width: 479px) {
-        max-width: 479px;
-        height: 110px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     .title {
         /* Parametre du titre */
@@ -101,6 +96,14 @@ h1,
 /* *************************************** */
 
 
+.index {
+    max-width: 479px;
+    height: 1957px;
+
+    border: 1px solid blue;
+}
+
+
 /* *************************************** */
 /* ************* Section 1 *************** */
 /* *************************************** */
@@ -108,43 +111,40 @@ h1,
 
 .section-1__invisible-box {
     /* Parametre de la boite invisible */
+    max-width: 479px;
+    height: 280px;
 
-    @media only screen and (max-width: 479px) {
-        max-width: 479px;
-        height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    h2 {
+        /* Parametre du h2 */
+        max-width: 235px;
+        margin-top: 9.5%;
 
-        h2 {
-            /* Parametre du h2 */
-            max-width: 235px;
-            margin-top: 9.5%;
+        text-align: center;
+        font-weight: 900;
+    }
 
-            text-align: center;
-            font-weight: 900;
-        }
+    p {
+        /* Parametre de p */
+        max-width: 300px;
+        margin-top: 4.3%;
 
-        p {
-            /* Parametre de p */
-            max-width: 300px;
-            margin-top: 4.3%;
+        text-align: center;
+        font-weight: 300;
+    }
 
-            text-align: center;
-            font-weight: 300;
-        }
+    button {
+        /* Parametre du boutton voir btn.scss */
+        @include button_section1
+    }
 
-        button {
-            /* Parametre du boutton voir btn.scss */
-            @include button_section1
-        }
-
-        a {
-            /* Parametre du lien */
-            text-decoration: none;
-            color: white;
-        }
+    a {
+        /* Parametre du lien */
+        text-decoration: none;
+        color: white;
     }
 
 }
@@ -157,32 +157,30 @@ h1,
 
 .invisible-box-section-2 {
     /* Parametre de la boite invisible */
+    max-width: 479px;
+    height: 358px;
+    margin-top: 12.5%;
 
-    @media only screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .box-button {
+        /* Parametre de la boite pour les bouttons de fonctionnement */
         max-width: 479px;
-        height: 358px;
-        margin-top: 12.5%;
+        height: 310px;
+        margin: 0 auto;
 
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-
-        .box-button {
-            /* Parametre de la boite pour les bouttons de fonctionnement */
-            max-width: 479px;
-            height: 310px;
-            margin: 0 auto;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .button {
-            /* Parametre du boutton voir btn.scss */
-            @include button_operation
-        }
+        align-items: center;
     }
+
+    .button {
+        /* Parametre du boutton voir btn.scss */
+        @include button_operation
+    }
+
 }
 
 
@@ -193,44 +191,38 @@ h1,
 
 .invisible-box-section-3 {
     /* Parametre de la boite invisible */
+    max-width: 479px;
+    height: 1226px;
+    margin-top: 12.5%;
 
-    @media only screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
 
-        max-width: 479px;
-        height: 1226px;
-        margin-top: 12.5%;
+    background-color: #f6f6f6;
 
-        display: flex;
-        flex-direction: column;
-
-        background-color: #f6f6f6;
-
-        h2 {
-            /* Parametre du h2 */
-            margin-top: 14%;
-        }
+    h2 {
+        /* Parametre du h2 */
+        margin-top: 14%;
     }
+
 }
 
 .box-card {
     /* Parametre de la boite pour les cartes */
+    max-width: 479;
+    height: 1062px;
+    margin-top: 6%;
 
-    @media only screen and (max-width: 479px) {
-        max-width: 479;
-        height: 1062px;
-        margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-        .card {
-            /* Parametre de carte voir card.scss */
-            @include card
-        }
-
+    .card {
+        /* Parametre de carte voir card.scss */
+        @include card
     }
+
 }
 
 
@@ -241,48 +233,46 @@ h1,
 
 footer {
     /* Parametre de la boite invisible */
+    max-width: 479px;
+    height: 197px;
 
-    @media only screen and (max-width: 479px) {
+    color: white;
+    background-color: #353535;
 
-        height: 197px;
+    h2 {
+        /* Parametre du h2 */
+        margin-left: 6%;
+        margin-top: 4%;
+    }
 
-        color: white;
-        background-color: #353535;
+    .link-list {
+        /* Parametre de la boite pour les li */
+        height: 96px;
+        margin-top: 4%;
+        margin-left: 6%;
 
-        h2 {
-            /* Parametre du h2 */
-            margin-left: 6%;
-            margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .link-list--margin-1 {
+            /* Parametre de la marge pour le premier li */
+            margin-left: 2%;
+            display: inline-block;
         }
 
-        .link-list {
-            /* Parametre de la boite pour les li */
-            height: 96px;
-            margin-top: 4%;
-            margin-left: 6%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .link-list--margin-2 {
+            /* Parametre de la marge pour le second li */
+            margin-left: 0.2%;
+            display: inline-block;
+        }
 
-            .link-list--margin-1 {
-                /* Parametre de la marge pour le premier li */
-                margin-left: 2%;
-                display: inline-block;
-            }
-
-            .link-list--margin-2 {
-                /* Parametre de la marge pour le second li */
-                margin-left: 0.2%;
-                display: inline-block;
-            }
-
-            a {
-                /* Parametre du lien */
-                color: white;
-                text-decoration: none;
-            }
-
+        a {
+            /* Parametre du lien */
+            color: white;
+            text-decoration: none;
         }
 
     }
+
 }

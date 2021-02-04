@@ -12,6 +12,7 @@
         display: block;
 
         text-decoration: none;
+        color: cadetblue;
 
         border-radius: 15px;
     }
@@ -27,7 +28,6 @@
             object-fit: cover;
             border-radius: 15px 15px 0px 0px;
         }
-
     }
 
     &__label {
@@ -49,17 +49,17 @@
         border-radius: 3px;
 
         background-color: #99e2d0;
-
     }
 
     &__box-info {
         width: 100%;
         height: 77px;
-        background-color: white;
-        border-radius: 15px;
 
         display: flex;
         justify-content: space-between;
+
+        background-color: white;
+        border-radius: 15px;
 
     }
 
@@ -88,24 +88,19 @@
         i {
             margin-top: 22px;
             margin-left: 26%;
+
             font-size: 26px;
 
-            .fas.fa-heart{
+            .fas.fa-heart {
                 color: coral;
                 transition: color 5s ease-in-out;
 
-                &:hover{
+                &:hover {
                     color: coral;
                 }
             }
 
-
         }
-
-        i:hover {
-            
-        }
-
 
     }
 }
