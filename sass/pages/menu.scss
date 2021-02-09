@@ -1,35 +1,29 @@
+
 /* *************************************** */
 /* **************** Body ***************** */
 /* *************************************** */
 
 
-/* *************************************** */
-/* *************** Header **************** */
-/* *************************************** */
+.body-size-menu-a {
+    /* Parametre de la page pour les menus */
 
-
-.menu-a-invisible-box-header {
-    /* Parametre de la boite invisible */
-    max-width: 479px;
-    height: 63px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .menu-a-title {
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(1580px) {
         display: flex;
-
-        a {
-            /* Parametre de l'icone return */
-            position: relative;
-            top: 16px;
-            right: 32%;
-            color: black;
-        }
-
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc;
+}
+
+.body-size-menu-b {
+    /* Hauteur de la page pour le menu "La note enchantée" */
+    height: 1726px;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include tablet-landscape-pc-height(1720px);
 }
 
 
@@ -39,28 +33,63 @@
 
 
 .menu {
-    /* Paramétre du main*/
-    max-width: 479px;
-    height: 1410px;
-    background-color: #f6f6f6;
+    /* Paramétre du main pour les menus*/
+    max-width: $mobile;
+    height: 1391px;
+
+    background-color: $menu-color;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(1320px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-height(1385px);
+}
+
+.menu-b {
+    /* Paramétre du main pour le menu "La note enchantée"*/
+    height: 1489px;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(1459px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc;
 }
 
 .main__picture {
-    /* Parametre de la photo principale*/
-    width: 100%;
-    height: 219px;
+    /* Parametre de la boite pour la photo principale*/
+    width: $full-width;
+    height: 220px;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include pc;
 
     img {
-        width: 100%;
+        /* Parametre de la photo principale*/
+        width: $full-width;
         height: 275px;
-        margin: 0 auto;
+        margin: $margin-center;
 
         position: absolute;
         z-index: 1;
 
         object-fit: cover;
     }
-
 }
 
 
@@ -77,13 +106,37 @@
     z-index: 2;
 
     border-radius: 35px 35px 0px 0px;
-    background-color: #f6f6f6;
+    background-color: $menu-color;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include pc {
+        display: flex;
+        justify-content: center;
+    }
 
     .restaurant__box {
+        /* Parametre de la boite pour le nom du restaurant et l'icone coeur*/
         width: 330px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            justify-content: space-around;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            justify-content: space-around;
+        }
     }
 
     h2 {
@@ -98,7 +151,6 @@
         display: flex;
         align-items: center;
     }
-
 }
 
 
@@ -108,73 +160,236 @@
 
 
 .menu-a-section-2__invisible-box {
-    width: 100%;
-    height: auto;
+    /* Parametre de la boite invisible */
+    width: $full-width;
+    height: 1010px;
+
+    background-color: $menu-color;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(1120px);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-height(1245px);
+
+    &--size-menu-b {
+        /* Parametre de la boite invisible pour le menu "La note enchantée" */
+        height: 1185px;
+        border: 0.1px solid $menu-color;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include mobile-landscape-tablet-height(1158px);
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include tablet-landscape-pc-height(1185px);
+    }
+
+    &--margin-top-menu-b {
+        /* Margin pour "Entrées" du menu "La note enchantée" */
+        margin-top: 3.8% !important;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin-top: 3.2% !important;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin-top: 3% !important;
+        }
+    }
+
+    &--margin-top-2-menu-b {
+        /* Margin pour "Plats" du menu "La note enchantée" */
+        margin-top: 7% !important;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin-top: 4.7% !important;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin-top: 1% !important;
+        }
+    }
+
+    &--margin-top-3-menu-b {
+        /* Margin pour "Dessert" du menu "La note enchantée" */
+        margin-top: 10.6% !important;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin-top: 7% !important;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin-top: 2.4% !important;
+        }
+
+    }
 
     h3 {
+        /* Parametre des titres entrees,plats,dessert */
+        margin-top: 4%;
+        margin-left: 6%;
+
         font-weight: 300;
         font-size: 14px;
-        margin-top: 6%;
-        margin-left: 6%;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin-top: 3%;
+            margin-left: 0%;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin-top: 3%;
+            margin-left: 0%;
+
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .menu-a-section-2__invisible-box--margin-top {
-        margin-top: 10.5%;
+        /* Margin pour "Plats" des menu */
+        margin-top: 12%;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include mobile-landscape-tablet-margin-top(5%);
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include tablet-landscape-pc-margin-top(3%);
     }
 
-    .menu-b-section-2__invisible-box--margin-top {
-        margin-top: 6.5%;
-    }
-
-    .boite_trait {
+    .box_trait {
+        /*Parametre de la boite pour le trait qui souligne entree,plats,dessert */
         width: 9%;
         height: auto;
-        margin-top: 1%;
+        margin-top: 2%;
         margin-left: 6%;
-        border: 1.8px solid #99e2d0;
-    }
 
+        border: 1.8px solid $tertiary-color;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin: $margin-center;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin: $margin-center;
+        }
+    }
 }
 
 .card-box--modify-size-menu-b {
+    /* Parmetre de la boite qui contient les entrees pour le menu "La note enchantée"  */
+    width: $full-width;
     height: 330px !important;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include tablet {
+        max-width: 959px;
+    }
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include pc {
+        max-width: 1280px;
+    }
+
 }
 
 .card-box {
-    width: 350px;
-    height: 235px;
-    margin: 0 auto;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
+    /* Parametre de la boite pour menu__dishe */
+    width: $full-width;
+    height: 233px;
+    margin-top: 3%;
+
+    @include flex-direction-column-justify-space-between;
+    align-items: center;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-margin-top(1%);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-margin-top(2%);
 
     .menu__dishe {
-        height: 315px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        /* Parametre des boites qui contient les cartes dans entrees,plats,dessert */
+        width: 350px;
+        height: 233px;
+
+        @include flex-direction-column-justify-space-between;
+    }
+
+    .menu__dishe--modify-size-menu-b {
+        /* Parametre des boites qui contient les cartes dans entrees,plats,dessert du menu "La note enchantée" */
+        width: 350px;
+        height: 314px;
+
+        @include flex-direction-column-justify-space-between;
     }
 
     .card__dishe {
-        width: 100%;
+        /* Parametre de l'interieur des cartes */
+        width: $full-width;
         height: 69px;
-        margin: 0 auto;
+        margin: $margin-center;
 
         background-color: white;
         border-radius: 20px;
         box-shadow: 0px 3px 5px rgb(195, 195, 196);
 
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            max-width: $tablet;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            max-width: $pc;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         >h3 {
+            /* Parametre des titres à l'intérieur des cartes */
             margin-top: 5%;
             margin-left: 3%;
 
             font-weight: bold;
             font-size: 16px;
+
+            /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+            @include tablet {
+                margin-left: 3%;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+            @include pc {
+                margin-left: 3%;
+                display: flex;
+                justify-content: flex-start;
+            }
         }
 
         >p {
+            /* Parametre du texte à l'intérieur des cartes */
             margin-top: 2%;
             margin-left: 3%;
 
@@ -182,27 +397,56 @@
         }
 
         .price {
+            /* Parametre des prix à l'intérieur des cartes */
             position: relative;
             font-weight: bold;
-            font-size: 16PX;
+            font-size: 16px;
             left: 80%;
-            bottom: 30%;
-        }
+            bottom: 35%;
 
+            /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+            @include tablet {
+                max-width: $tablet;
+                left: 85%;
+                bottom: 55%;
+            }
+        }
+    }
+}
+
+.box-button-menu-b {
+    /* Parametre de la boite du bouton du menu "La note enchantée" */
+    margin-top: 11% !important;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet {
+        margin-top: 28px !important;
     }
 
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc {
+        margin-top: 0.6% !important;
+    }
 }
 
 .box-button {
-
-    width: 100%;
-    margin-top: 7%;
+    /* Parametre de la boite du bouton des menu */
+    width: $full-width;
+    margin-top: 11%;
 
     display: flex;
     justify-content: center;
 
-    button {
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-margin-top(27px);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-margin-top(0.5%);
+
+    .order__button {
+        /* Parametre du bouton voir dans btn.scss*/
         @include order__button;
+        text-decoration: none;
         color: white;
     }
 }

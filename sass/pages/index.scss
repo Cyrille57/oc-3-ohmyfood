@@ -1,93 +1,19 @@
-/* *************************************** */
-/* *************** General *************** */
-/* *************************************** */
-
-
-* {
-    /* Retire la marge et le padding par défault */
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif, "Arial", "Verdana", "sans-serif";
-}
-
-h1,
-.restaurant__name,
-.footer-title {
-    /* Police pour h1 et .footer-tittle */
-    font-family: "Shrikhand", cursive, "Arial", "Verdana", "sans-serif";
-}
-
-.link-list {
-    /* Enleve les puces sur la liste */
-    list-style: none;
-}
-
 
 /* *************************************** */
 /* **************** Body ***************** */
 /* *************************************** */
 
 
-/* *************************************** */
-/* *************** Header **************** */
-/* *************************************** */
+body {
+    /* Parametre de la page index.html*/
+    max-width: 480px;
+    min-width: 100%;
 
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet;
 
-.invisible-box-header {
-    /* Parametre de la boite invisible */
-    max-width: 479px;
-    height: 110px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    .title {
-        /* Parametre du titre */
-        width: 100%;
-        height: 62px;
-        margin-top: 0%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        box-shadow: 0px 8px 32px #c9c8c8;
-    }
-
-    .location {
-        /* Parametre du lieu */
-        width: 100%;
-        height: 45px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background-color: #eaeaea;
-
-        .location__icon {
-            /* Parametre de l'icone du lieu */
-            width: 10%;
-            height: 47px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .location__text {
-            /* Parametre du texte du lieu */
-            width: 42%;
-            height: 47px;
-
-            display: flex;
-            align-items: center;
-
-            font-size: 18px;
-        }
-    }
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc;
 }
 
 
@@ -97,10 +23,17 @@ h1,
 
 
 .index {
-    max-width: 479px;
-    height: 1957px;
+    /* Paramétre du main */
+    max-width: 480px;
+    min-width: 100%;
+    height: 1960px;
 
-    border: 1px solid blue;
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(1911px);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-height(1890px);
+
 }
 
 
@@ -111,12 +44,18 @@ h1,
 
 .section-1__invisible-box {
     /* Parametre de la boite invisible */
-    max-width: 479px;
+    max-width: 480px;
+    min-width: 100%;
     height: 280px;
 
-    display: flex;
-    flex-direction: column;
+    @include flex-direction-column-justify-space-between;
     align-items: center;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height(215px);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-height(235px);
 
     h2 {
         /* Parametre du h2 */
@@ -125,6 +64,13 @@ h1,
 
         text-align: center;
         font-weight: 900;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include mobile-landscape-tablet-margin-top(5%);
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include tablet-landscape-pc-margin-top(4%);
+
     }
 
     p {
@@ -134,13 +80,25 @@ h1,
 
         text-align: center;
         font-weight: 300;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include mobile-landscape-tablet-margin-top(0%);
+
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include tablet-landscape-pc-margin-top(0%);
+
     }
 
-    button {
+/*    button {
         /* Parametre du boutton voir btn.scss */
-        @include button_section1
+/*        @include button_section1;
     }
+*/
 
+.section1__button{
+    @include button_section1;
+}
     a {
         /* Parametre du lien */
         text-decoration: none;
@@ -157,7 +115,8 @@ h1,
 
 .invisible-box-section-2 {
     /* Parametre de la boite invisible */
-    max-width: 479px;
+    max-width: 480px;
+    min-width: 100%;
     height: 358px;
     margin-top: 12.5%;
 
@@ -165,22 +124,33 @@ h1,
     flex-direction: column;
     align-items: flex-start;
 
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-margin-top-align-items(8%);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-margin-top-align-items(3.5%);
+
     .box-button {
         /* Parametre de la boite pour les bouttons de fonctionnement */
-        max-width: 479px;
+        max-width: 480px;
         height: 310px;
         margin: 0 auto;
 
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            max-width: 959px;
+            width: 500px;
+        }
     }
 
     .button {
         /* Parametre du boutton voir btn.scss */
         @include button_operation
     }
-
 }
 
 
@@ -191,88 +161,70 @@ h1,
 
 .invisible-box-section-3 {
     /* Parametre de la boite invisible */
-    max-width: 479px;
-    height: 1226px;
+    max-width: 480px;
+    min-width: 100%;
+    height: 1270px;
     margin-top: 12.5%;
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
-    background-color: #f6f6f6;
+    background-color: $menu-color;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-height-margin-top-align-items(1301px, 3%);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-height-margin-top-align-items(1235px, 3%);
 
     h2 {
         /* Parametre du h2 */
-        margin-top: 14%;
-    }
+        margin-top: 15%;
 
+        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+        @include tablet {
+            margin-top: 5%;
+        }
+
+        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+        @include pc {
+            margin-top: 3%;
+        }
+    }
 }
 
 .box-card {
     /* Parametre de la boite pour les cartes */
-    max-width: 479;
+    max-width: 480px;
     height: 1062px;
+    margin: 0 auto;
     margin-top: 6%;
 
-    display: flex;
-    flex-direction: column;
+    @include flex-direction-column-justify-space-between;
     align-items: center;
-    justify-content: space-between;
+
+    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+    @include mobile-landscape-tablet-margin-top(3%);
+
+    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+    @include tablet-landscape-pc-margin-top(3%);
+
 
     .card {
         /* Parametre de carte voir card.scss */
         @include card
     }
 
-}
-
-
-/* *************************************** */
-/* *************** Footer **************** */
-/* *************************************** */
-
-
-footer {
-    /* Parametre de la boite invisible */
-    max-width: 479px;
-    height: 197px;
-
-    color: white;
-    background-color: #353535;
-
-    h2 {
-        /* Parametre du h2 */
-        margin-left: 6%;
-        margin-top: 4%;
+    .heart {
+        font-size: 50px;
+        transition: 0.5s;
     }
 
-    .link-list {
-        /* Parametre de la boite pour les li */
-        height: 96px;
-        margin-top: 4%;
-        margin-left: 6%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .link-list--margin-1 {
-            /* Parametre de la marge pour le premier li */
-            margin-left: 2%;
-            display: inline-block;
-        }
-
-        .link-list--margin-2 {
-            /* Parametre de la marge pour le second li */
-            margin-left: 0.2%;
-            display: inline-block;
-        }
-
-        a {
-            /* Parametre du lien */
-            color: white;
-            text-decoration: none;
-        }
-
+    .heart:hover {
+        background: linear-gradient($secondary-color, $primary-color);
+        background-clip: text;
+        color: transparent;
+        font-weight: 900;
     }
-
 }
