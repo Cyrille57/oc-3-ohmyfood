@@ -1,0 +1,70 @@
+// ***************************************
+// *********** MAIN menu.html ************
+// ***************************************
+
+
+.menu {
+    // Paramétre du main pour les menus
+
+    //Width:
+    @include max-min-width($mobile);
+
+    background-color: $menu-color;
+
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
+
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
+
+    @include pc {
+        @include max-min-width($pc);
+    }
+
+    @include pc-xl {
+        min-width: $full;
+    }
+}
+
+.main__picture {
+    // Parametre de la boite pour la photo principale
+
+    //width:
+    @include max-min-width($mobile);
+
+    height: 220px;
+
+    img {
+        // Parametre de la photo principale
+
+        //width:
+        @include max-min-width($mobile);
+        height: 275px;
+        margin: $margin-center;
+
+        position: absolute;
+        z-index: 1;
+
+        object-fit: cover;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            @include max-min-width($mobile-landscape-tablet);
+        }
+
+        @include tablet-landscape {
+            @include max-min-width($tablet-landscape);
+        }
+
+        @include pc {
+            @include max-min-width($pc);
+        }
+
+        @include pc-xl {
+            min-width: $full;
+        }
+    }
+}

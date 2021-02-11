@@ -1,11 +1,15 @@
 
-/* *************************************** */
-/* ************ Media queries ************ */
-/* *************************************** */
+// ***************************************
+// ************ Media queries ************
+// ***************************************
 
 
 $breakpoints: (
-    mobile: $mobile,
-    tablet: $tablet,
-    pc:     $pc
+    mobile:                     $mobile,
+    mobile-landscape-tablet:    $mobile-landscape-tablet,
+    tablet-landscape:           $tablet-landscape,
+    pc:                         $pc,
+    pc-xl:                      $pc-xl
+
+
     )

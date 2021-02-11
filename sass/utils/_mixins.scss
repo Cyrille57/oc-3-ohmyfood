@@ -1,172 +1,131 @@
-/* *************************************** */
-/* ************ Media queries ************ */
-/* *************************************** */
+// ***************************************
+// ************* MIXINS ******************
+// ***************************************
 
 
-/* Mixin pour media queries: */
+///////////////////////////////////////
+//////////// MEDIA QUERIES ////////////
+///////////////////////////////////////
 
-/* Sans contenu:
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-@mixin tablet {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
 
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin pc {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        @content;
-    }
-}
-
-/* Largeur:
-    Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+// Pour ecrans entre 480px et 768px (Portable mode paysage et tablette)
 @mixin mobile-landscape-tablet {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        max-width: map-get($breakpoints, tablet);
-        min-width: 100%;
+    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, mobile-landscape-tablet)) {
         @content;
     }
 }
 
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin tablet-landscape-pc {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        max-width: map-get($breakpoints, pc);
-        min-width: 100%;
+// Pour écrans entre 768px et 1024px (Tablette mode paysage)
+@mixin tablet-landscape {
+    @media only screen and (min-width: map-get($breakpoints, mobile-landscape-tablet)) and (max-width: map-get($breakpoints, tablet-landscape)) {
+        @content;
+    }
+}
+
+// Pour écrans entre 1024px et 1600px (Ecrans pc de petite et moyenne taille)
+@mixin pc {
+    @media only screen and (min-width: map-get($breakpoints, tablet-landscape)) and (max-width: map-get($breakpoints, pc)) {
+        @content;
+    }
+}
+
+// Pour écrans de 1600px et plus (Ecrans pc de grande taille)
+@mixin pc-xl {
+    @media only screen and (min-width: map-get($breakpoints, pc-xl)) {
         @content;
     }
 }
 
 
-/* Avec hauteur:
-    Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-@mixin mobile-landscape-tablet-height($height) {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        max-width: map-get($breakpoints, tablet);
-        min-width: 100%;
-        height: $height;
-        @content;
-    }
+///////////////////////////////////////
+//////////////// WIDTH ////////////////
+///////////////////////////////////////
+
+// Width:
+@mixin max-min-width($max-width){
+    max-width: $max-width;
+    min-width: $full;
 }
-
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin tablet-landscape-pc-height($height) {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        max-width: map-get($breakpoints, pc);
-        min-width: 100%;
-        height: $height;
-        @content;
-    }
+@mixin max-min-width-full{
+    max-width: $full;
+    min-width: $full;
 }
-
-/* Avec margin-top:
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-@mixin mobile-landscape-tablet-margin-top($margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        max-width: map-get($breakpoints, tablet);
-        min-width: 100%;
-        margin-top: $margin-top;
-    }
+// Width order__button:
+@mixin width-order__button{
+    width: 185px;
 }
-
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin tablet-landscape-pc-margin-top($margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        max-width: map-get($breakpoints, pc);
-        min-width: 100%;
-        margin-top: $margin-top;
-    }
+//Width et height button_operation:
+@mixin width-height-button_operation {
+    width: 325px;
+    height: 73px;
 }
-
-/* Avec margin-top et align-items:center; :
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-@mixin mobile-landscape-tablet-margin-top-align-items($margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        max-width: map-get($breakpoints, tablet);
-        min-width: 100%;
-        margin-top: $margin-top;
-
-        align-items: center;
-    }
-}
-
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin tablet-landscape-pc-margin-top-align-items($margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        max-width: map-get($breakpoints, pc);
-        min-width: 100%;
-        margin-top: $margin-top;
-
-        align-items: center;
-    }
-}
-
-/* Avec margin-top et align-items:center; et hauteur :
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-@mixin mobile-landscape-tablet-height-margin-top-align-items($height, $margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
-        max-width: map-get($breakpoints, tablet);
-        min-width: 100%;
-        height: $height;
-        margin-top: $margin-top;
-
-        align-items: center;
-    }
-}
-
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-@mixin tablet-landscape-pc-height-margin-top-align-items($height, $margin-top) {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, pc)) {
-        max-width: map-get($breakpoints, pc);
-        min-width: 100%;
-        height: $height;
-        margin-top: $margin-top;
-
-        align-items: center;
-    }
+//Width et Height Button:
+@mixin width-height-button_section1 {
+    width: 218px;
+    height: 50px;
 }
 
 
-/* *************************************** */
-/* ************** Flexbox **************** */
-/* *************************************** */
+
+// ***************************************
+// ************** Flexbox ****************
+// ***************************************
 
 
-/* Mixin flexbox: */
-/*Display, align-item et justify content: center; */
-@mixin flex-align-item-justify-content {
+// Mixin flexbox:
+// Display, flexdirection:column et align-items :
+@mixin flex-direction-column-align-items-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-direction-column-justify-space-around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+//Display, align-item et justify content: center;
+@mixin flex-align-item-center-justify-content-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*Display, flex-direction:column et justify content: center; */
+//Display, flex-direction:column et justify content: center;
 @mixin flex-direction-column-justify-space-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+@mixin flex-align-item-center-justify-content-space-around{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flex-direction-column-align-items-flex-start{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @mixin gradient-heart {
     background-color: linear-gradient(45deg, $secondary-color 100%, $primary-color 100%);
 }
 
-/*@mixin card-box-size ($restaurant, $restaurant-name: $restaurant-name)
-{
-    @if ($restaurant!= $restaurant-name)
-    {
-        .card-box {
-        height: 235px;
-        }
-    }
-
-    @else
-    {
-        .card-box {
-        height: 350px;
-        }
-    }
-}
-*/
+//@mixin card-box-size ($restaurant, $restaurant-name: $restaurant-name)
+//{
+//    @if ($restaurant!= $restaurant-name)
+//    {
+//        .card-box {
+//        height: 235px;
+//        }
+//    }
+//
+//   @else
+//    {
+//        .card-box {
+//        height: 350px;
+//        }
+//    }
+//}

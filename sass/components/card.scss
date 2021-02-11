@@ -1,8 +1,13 @@
+// ***************************************
+// **************** CARD *****************
+// ***************************************
+
+
 @mixin card {
     width: 335px;
     height: 250px;
 
-    border-radius: 15px;
+    border-radius: $quart;
     box-shadow: 0px 3px 5px rgb(195, 195, 196);
 
     a {
@@ -13,21 +18,21 @@
 
         text-decoration: none;
 
-        border-radius: 15px;
+        border-radius: $quart;
     }
 
     &__picture {
         width: 335px;
         height: 173px;
 
-        border-radius: 15px;
+        border-radius: $quart;
 
         img {
-            width: 100%;
-            height: 100%;
+            width: $full;
+            height: $full;
 
             object-fit: cover;
-            border-radius: 15px 15px 0px 0px;
+            border-radius: $quart $quart 0px 0px;
         }
     }
 
@@ -39,21 +44,20 @@
         bottom: 95%;
         left: 73%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // Flexbox
+        @include flex-align-item-center-justify-content-center;
 
         font-size: 12px;
         font-weight: 500;
 
-        color: #008766;
-        background-color: #99e2d0;
+        color: $label-color;
+        background-color: $label-background-color;
 
         border-radius: 3px;
     }
 
     &__box-info {
-        width: 100%;
+        width: $full;
         height: 77px;
 
         display: flex;
@@ -61,8 +65,7 @@
 
         background-color: white;
 
-        border-radius: 15px;
-
+        border-radius: $quart;
     }
 
     &__info-title {

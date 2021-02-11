@@ -1,0 +1,106 @@
+// ***************************************
+// ******** SECTION 1 index.html *********
+// ***************************************
+
+
+.section-1__invisible-box {
+    // Parametre de la boite invisible
+
+    //width:
+    @include max-min-width($mobile);
+
+    height: 288px;
+    background-color: #f6f6f6;
+
+    //Flexbox:
+    @include flex-direction-column-justify-space-between;
+    align-items: center;
+
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
+
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
+
+    @include pc {
+        @include max-min-width($pc);
+    }
+
+    @include pc-xl {
+        min-width: $full;
+    }
+
+    h2 {
+        // Parametre du h2
+        max-width: 235px;
+        margin-top: 10.5%;
+
+        text-align: center;
+        font-weight: 900;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            @include max-min-width($mobile-landscape-tablet);
+            margin-top: 5%;
+        }
+
+        @include tablet-landscape {
+            @include max-min-width($tablet-landscape);
+            margin-top: 5%;
+        }
+
+        @include pc {
+            @include max-min-width($pc);
+            margin-top: 5%;
+        }
+
+        @include pc-xl {
+            min-width: $full;
+            margin-top: 3%;
+        }
+    }
+
+    p {
+        // Parametre de p
+
+        max-width: 300px;
+        margin-bottom: 4%;
+
+        text-align: center;
+        font-weight: 300;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            @include max-min-width($mobile-landscape-tablet);
+            margin-bottom: 2.5%;
+        }
+
+        @include tablet-landscape {
+            @include max-min-width($tablet-landscape);
+            margin-bottom: 2.5%;
+        }
+
+        @include pc {
+            @include max-min-width($pc);
+            margin-bottom: 2.5%;
+        }
+
+        @include pc-xl {
+            min-width: $full;
+            margin-bottom: 2.5%;
+        }
+    }
+
+    .section1__button {
+        @include button_section1;
+    }
+
+    a {
+        // Parametre du lien
+        text-decoration: none;
+        color: white;
+    }
+}

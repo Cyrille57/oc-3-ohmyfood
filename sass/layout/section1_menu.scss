@@ -1,0 +1,43 @@
+// ***************************************
+// ******** SECTION 1 menu.html **********
+// ***************************************
+
+
+.menu-section-1__invisible-box {
+    // Parametre de la boite invisible
+
+    //Width:
+    @include max-min-width($mobile);
+    height: 80px;
+
+    position: relative;
+    z-index: 2;
+
+    border-radius: 35px 35px 0px 0px;
+    background-color: $menu-color;
+
+    //Flexbox
+    @include flex-align-item-center-justify-content-center;
+
+    .restaurant__box {
+        // Parametre de la boite pour le nom du restaurant et l'icone coeur"
+
+        width: 338px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2 {
+        margin-top: 8%;
+    }
+
+    .restaurant__icon {
+        height: 29px;
+        margin-top: 8.5%;
+        margin-right: 7.5%;
+
+        display: flex;
+        align-items: center;
+    }
+}

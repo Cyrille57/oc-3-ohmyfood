@@ -1,0 +1,101 @@
+// ***************************************
+// ******** Section 2 Index.html *********
+// ***************************************
+
+
+.invisible-box-section-2 {
+    // Parametre de la boite invisible
+
+    //Width:
+    @include max-min-width($mobile);
+
+    height: 440px;
+
+    // Flexbox:
+    @include flex-direction-column-align-items-flex-start;
+
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
+
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
+
+    @include pc {
+        @include max-min-width($pc);
+    }
+
+    @include pc-xl {
+        min-width: $full;
+    }
+
+    >h2 {
+        margin-top: 12.5%;
+        margin-left: 5%;
+
+        //Flexbox:
+        @include flex-direction-column-justify-space-between;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            max-width: 325px;
+            margin-top: 5% !important;
+        }
+
+        @include tablet-landscape {
+            max-width: 325px;
+            margin-top: 5% !important;
+        }
+
+        @include pc {
+            max-width: 325px;
+            margin-top: 5% !important;
+            margin-left: 20%;
+        }
+
+        @include pc-xl {
+            max-width: 325px;
+            margin-top: 2% !important;
+            margin-left: 25%;
+        }
+    }
+
+    .box-button {
+        // Parametre de la boite pour les bouttons de fonctionnement
+
+        max-width: 325px;
+        height: 270px;
+        margin: 0 auto;
+        margin-top: 31px !important;
+
+        //Flexbox:
+        @include flex-direction-column-justify-space-between;
+        align-items: center;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            max-width: 325px;
+        }
+
+        @include tablet-landscape {
+            max-width: 325px;
+            margin-top: 0px !important;
+        }
+
+        @include pc {
+            max-width: 325px;
+            margin-top: 0px !important;
+        }
+
+        @include pc-xl {
+            max-width: 325px;
+        }
+    }
+}
+
+.button {
+    // Parametre du boutton voir btn.scss
+    @include button_operation
+}

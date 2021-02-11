@@ -1,69 +1,16 @@
-@charset "UTF-8";
-/* *************************************** */
-/* **************** Color **************** */
-/* *************************************** */
-/* *************************************** */
-/* ***************** Size **************** */
-/* *************************************** */
-/* *************************************** */
-/* **************** Margin *************** */
-/* *************************************** */
-/*$restaurant-name: ("La note enchantée");*/
-/* *************************************** */
-/* ************ Media queries ************ */
-/* *************************************** */
-/* *************************************** */
-/* ************ Media queries ************ */
-/* *************************************** */
-/* Mixin pour media queries: */
-/* Sans contenu:
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* Largeur:
-    Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* Avec hauteur:
-    Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* Avec margin-top:
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* Avec margin-top et align-items:center; :
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* Avec margin-top et align-items:center; et hauteur :
-Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-/* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-/* *************************************** */
-/* ************** Flexbox **************** */
-/* *************************************** */
-/* Mixin flexbox: */
-/*Display, align-item et justify content: center; */
-/*Display, flex-direction:column et justify content: center; */
-/*@mixin card-box-size ($restaurant, $restaurant-name: $restaurant-name)
-{
-    @if ($restaurant!= $restaurant-name)
-    {
-        .card-box {
-        height: 235px;
-        }
-    }
-
-    @else
-    {
-        .card-box {
-        height: 350px;
-        }
-    }
-}
-*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-/* *************************************** */
-/* *************** General *************** */
-/* *************************************** */
 * {
-  /* Retire la marge et le padding par défault */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif, "Arial", "Verdana", "sans-serif";
@@ -72,360 +19,433 @@ Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et 
 h1,
 .restaurant__name,
 .footer-title {
-  /* Police pour h1 et .footer-tittle */
   font-family: "Shrikhand", cursive, "Arial", "Verdana", "sans-serif";
 }
 
 .link-list {
-  /* Enleve les puces sur la liste */
   list-style: none;
 }
 
-/* *************************************** */
-/* ********* Header index.html *********** */
-/* *************************************** */
 .invisible-box-header {
-  /* Parametre de la boite invisible */
   max-width: 480px;
   min-width: 100%;
-  height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-header {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .invisible-box-header {
-    max-width: 1280px;
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-header {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-header {
     min-width: 100%;
   }
 }
 .invisible-box-header .title {
-  /* Parametre du titre */
-  max-width: 480px;
+  max-width: 100%;
   min-width: 100%;
-  height: 62px;
+  height: 63px;
   margin-top: 0%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 8px 32px #c9c8c8;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .invisible-box-header .title {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-header .title {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-header .title {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-header .title {
+    max-width: 100%;
+    min-width: 100%;
+  }
 }
 .invisible-box-header .location {
-  /* Parametre du lieu */
-  width: 100%;
-  height: 45px;
+  max-width: 100%;
+  min-width: 100%;
+  height: 51px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #eaeaea;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
+  box-shadow: inset 0px 2px 2px #c9c8c8;
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-header .location {
-    width: 959px;
+    max-width: 768px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-header .location {
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-header .location {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-header .location {
+    max-width: 1600px;
+    min-width: 100%;
   }
 }
 .invisible-box-header .location .location__icon {
-  /* Parametre de l'icone du lieu */
   width: 3%;
   height: 47px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .invisible-box-header .location .location__icon {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-header .location .location__icon {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-header .location .location__icon {
+    max-width: 1600px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-header .location .location__icon {
+    max-width: 1600px;
+  }
+}
 .invisible-box-header .location .location__text {
-  /* Parametre du texte du lieu */
   width: 37%;
   height: 47px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-size: 18px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-header .location .location__text {
-    width: 13%;
-    justify-content: center;
+    width: 28%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-header .location .location__text {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
   .invisible-box-header .location .location__text {
     width: 13%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-header .location .location__text {
+    width: 9%;
   }
 }
 
-/* *************************************** */
-/* ********** Header menu.scss *********** */
-/* *************************************** */
-.menu-a-invisible-box-header {
-  /* Parametre de la boite invisible */
+.menu-invisible-box-header {
   max-width: 480px;
+  min-width: 100%;
   height: 63px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-invisible-box-header {
-    max-width: 959px;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-invisible-box-header {
+    max-width: 768px;
     min-width: 100%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-invisible-box-header {
-    max-width: 1280px;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-invisible-box-header {
+    max-width: 1024px;
     min-width: 100%;
   }
 }
-.menu-a-invisible-box-header .menu-a-title {
-  /* Parametre de la boite pour le titre et l'icone fléche */
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-invisible-box-header {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-invisible-box-header {
+    min-width: 100%;
+  }
+}
+.menu-invisible-box-header .menu-title {
   display: flex;
 }
-.menu-a-invisible-box-header .menu-a-title a {
-  /* Parametre de l'icone return */
+.menu-invisible-box-header .menu-title a {
   position: relative;
   top: 16px;
   right: 32%;
   color: black;
 }
 
-/* *************************************** */
-/* *************** Footer **************** */
-/* *************************************** */
-footer {
-  /* Parametre de la boite invisible */
-  max-width: 480px;
-  min-width: 100%;
-  height: 196px;
-  color: white;
-  background-color: #353535;
-  border: 1px solid #353535;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  footer {
-    max-width: 959px;
-    min-width: 100%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  footer {
-    max-width: 1280px;
-    min-width: 100%;
-  }
-}
-footer .footer-title {
-  /* Parametre du h2 */
-  margin-left: 6%;
-  margin-top: 4%;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  footer .footer-title {
-    margin-top: 2%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  footer .footer-title {
-    margin-top: 2%;
-  }
-}
-footer .link-list {
-  /* Parametre de la boite pour les li */
-  height: 96px;
-  margin-top: 4%;
-  margin-left: 6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  footer .link-list {
-    margin-top: 1%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  footer .link-list {
-    margin-top: 2%;
-  }
-}
-footer .link-list .link-list--margin-1 {
-  /* Parametre de la marge pour le premier li */
-  margin-left: 2%;
-  display: inline-block;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  footer .link-list .link-list--margin-1 {
-    margin-left: 1.6%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  footer .link-list .link-list--margin-1 {
-    margin-left: 0.7%;
-  }
-}
-footer .link-list .link-list--margin-2 {
-  /* Parametre de la marge pour le second li */
-  margin-left: 0.2%;
-  display: inline-block;
-}
-footer .link-list a {
-  /* Parametre du lien */
-  color: white;
-  text-decoration: none;
-}
-
-/* *************************************** */
-/* **************** Body ***************** */
-/* *************************************** */
 body {
-  /* Parametre de la page index.html*/
   max-width: 480px;
   min-width: 100%;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   body {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    max-width: 1280px;
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  body {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  body {
     min-width: 100%;
   }
 }
 
-/* *************************************** */
-/* **************** Main ***************** */
-/* *************************************** */
 .index {
-  /* Paramétre du main */
   max-width: 480px;
   min-width: 100%;
-  height: 1960px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .index {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    height: 1911px;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .index {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    height: 1890px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .index {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .index {
+    min-width: 100%;
   }
 }
 
-/* *************************************** */
-/* ************* Section 1 *************** */
-/* *************************************** */
-.section-1__invisible-box {
-  /* Parametre de la boite invisible */
+.menu {
   max-width: 480px;
   min-width: 100%;
-  height: 280px;
+  background-color: #f6f6f6;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu {
+    max-width: 768px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu {
+    min-width: 100%;
+  }
+}
+
+.main__picture {
+  max-width: 480px;
+  min-width: 100%;
+  height: 220px;
+}
+.main__picture img {
+  max-width: 480px;
+  min-width: 100%;
+  height: 275px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .main__picture img {
+    max-width: 768px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main__picture img {
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .main__picture img {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .main__picture img {
+    min-width: 100%;
+  }
+}
+
+.section-1__invisible-box {
+  max-width: 480px;
+  min-width: 100%;
+  height: 288px;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-  /*    button {
-          /* Parametre du boutton voir btn.scss */
-  /*        @include button_section1;
-      }
-  */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .section-1__invisible-box {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    height: 215px;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .section-1__invisible-box {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    height: 235px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .section-1__invisible-box {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .section-1__invisible-box {
+    min-width: 100%;
   }
 }
 .section-1__invisible-box h2 {
-  /* Parametre du h2 */
   max-width: 235px;
-  margin-top: 9.5%;
+  margin-top: 10.5%;
   text-align: center;
   font-weight: 900;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .section-1__invisible-box h2 {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
     margin-top: 5%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .section-1__invisible-box h2 {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    margin-top: 4%;
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .section-1__invisible-box h2 {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .section-1__invisible-box h2 {
+    min-width: 100%;
+    margin-top: 3%;
   }
 }
 .section-1__invisible-box p {
-  /* Parametre de p */
   max-width: 300px;
-  margin-top: 4.3%;
+  margin-bottom: 4%;
   text-align: center;
   font-weight: 300;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .section-1__invisible-box p {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    margin-top: 0%;
+    margin-bottom: 2.5%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .section-1__invisible-box p {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    margin-top: 0%;
+    margin-bottom: 2.5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .section-1__invisible-box p {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-bottom: 2.5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .section-1__invisible-box p {
+    min-width: 100%;
+    margin-bottom: 2.5%;
   }
 }
 .section-1__invisible-box .section1__button {
   width: 218px;
   height: 50px;
-  margin-top: 8.5%;
+  margin-bottom: 15.5%;
   font-size: 16px;
   font-weight: 500;
   display: flex;
@@ -435,98 +455,213 @@ body {
   border: none;
   border-radius: 35px;
   box-shadow: 0px 3px 5px #c3c3c4;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .section-1__invisible-box .section1__button {
-    margin-top: 0%;
+    width: 218px;
+    height: 50px;
+    margin-bottom: 10%;
   }
 }
-@media all and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .section-1__invisible-box .section1__button {
-    margin-top: 0%;
+    width: 218px;
+    height: 50px;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .section-1__invisible-box .section1__button {
+    width: 218px;
+    height: 50px;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .section-1__invisible-box .section1__button {
+    width: 218px;
+    height: 50px;
+    margin-bottom: 5%;
   }
 }
 .section-1__invisible-box a {
-  /* Parametre du lien */
   text-decoration: none;
   color: white;
 }
 
-/* *************************************** */
-/* ************* Section 2 *************** */
-/* *************************************** */
-.invisible-box-section-2 {
-  /* Parametre de la boite invisible */
+.menu-section-1__invisible-box {
   max-width: 480px;
   min-width: 100%;
-  height: 358px;
-  margin-top: 12.5%;
+  height: 80px;
+  position: relative;
+  z-index: 2;
+  border-radius: 35px 35px 0px 0px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-section-1__invisible-box .restaurant__box {
+  width: 338px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-section-1__invisible-box h2 {
+  margin-top: 8%;
+}
+.menu-section-1__invisible-box .restaurant__icon {
+  height: 29px;
+  margin-top: 8.5%;
+  margin-right: 7.5%;
+  display: flex;
+  align-items: center;
+}
+
+.invisible-box-section-2 {
+  max-width: 480px;
+  min-width: 100%;
+  height: 440px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-section-2 {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    margin-top: 8%;
-    align-items: center;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .invisible-box-section-2 {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    margin-top: 3.5%;
-    align-items: center;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-section-2 {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-section-2 {
+    min-width: 100%;
+  }
+}
+.invisible-box-section-2 > h2 {
+  margin-top: 12.5%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .invisible-box-section-2 > h2 {
+    max-width: 325px;
+    margin-top: 5% !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-section-2 > h2 {
+    max-width: 325px;
+    margin-top: 5% !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-section-2 > h2 {
+    max-width: 325px;
+    margin-top: 5% !important;
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-section-2 > h2 {
+    max-width: 325px;
+    margin-top: 2% !important;
+    margin-left: 25%;
   }
 }
 .invisible-box-section-2 .box-button {
-  /* Parametre de la boite pour les bouttons de fonctionnement */
-  max-width: 480px;
-  height: 310px;
+  max-width: 325px;
+  height: 270px;
   margin: 0 auto;
+  margin-top: 31px !important;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-section-2 .box-button {
-    max-width: 959px;
-    width: 500px;
+    max-width: 325px;
   }
 }
-.invisible-box-section-2 .button {
-  /* Parametre du boutton voir btn.scss */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-section-2 .box-button {
+    max-width: 325px;
+    margin-top: 0px !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-section-2 .box-button {
+    max-width: 325px;
+    margin-top: 0px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-section-2 .box-button {
+    max-width: 325px;
+  }
+}
+
+.button {
   width: 325px;
-  height: 75px;
-  margin-top: 9%;
+  height: 73px;
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 25px;
   box-shadow: 0px 3px 5px #c3c3c4;
 }
-.invisible-box-section-2 .button:hover {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .button {
+    width: 325px;
+    height: 73px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .button {
+    width: 325px;
+    height: 73px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .button {
+    width: 325px;
+    height: 73px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .button {
+    width: 325px;
+    height: 73px;
+  }
+}
+.button:hover {
   background-color: #f5edff;
 }
-.invisible-box-section-2 .button i {
+.button i {
   margin-left: 4.6%;
   color: #7e7e7e;
 }
-.invisible-box-section-2 .button i:hover {
+.button i:hover {
   color: #9356DC;
 }
-.invisible-box-section-2 .button p {
+.button p {
   margin-left: 8%;
   font-weight: 500;
 }
-.invisible-box-section-2 .button__number {
+.button__number {
   width: 23px;
   height: 23px;
   position: relative;
@@ -536,91 +671,387 @@ body {
   border-radius: 35px;
   background-color: #9356DC;
 }
-.invisible-box-section-2 .button__number p {
+.button__number p {
   margin: 0 auto;
   color: white;
 }
 
-/* *************************************** */
-/* ************* Section 3 *************** */
-/* *************************************** */
-.invisible-box-section-3 {
-  /* Parametre de la boite invisible */
+.menu-section-2__invisible-box {
   max-width: 480px;
   min-width: 100%;
-  height: 1270px;
-  margin-top: 12.5%;
+  background-color: #f6f6f6;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-section-2__invisible-box {
+    max-width: 768px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-section-2__invisible-box {
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-section-2__invisible-box {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-section-2__invisible-box {
+    min-width: 100%;
+  }
+}
+.menu-section-2__invisible-box--margin-top {
+  margin-top: 11%;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-section-2__invisible-box--margin-top {
+    max-width: 768px;
+    min-width: 100%;
+    margin-top: 3.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-section-2__invisible-box--margin-top {
+    max-width: 1024px;
+    min-width: 100%;
+    margin-top: 2.5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-section-2__invisible-box--margin-top {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-top: 0%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-section-2__invisible-box--margin-top {
+    min-width: 100%;
+    margin-top: 0%;
+  }
+}
+.menu-section-2__invisible-box .starter {
+  margin-top: 5.5%;
+  margin-left: 5%;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-section-2__invisible-box .starter {
+    max-width: 768px;
+    min-width: 100%;
+    margin-top: 3.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-section-2__invisible-box .starter {
+    max-width: 1024px;
+    min-width: 100%;
+    margin-top: 3.5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-section-2__invisible-box .starter {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-top: 2.5%;
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-section-2__invisible-box .starter {
+    min-width: 100%;
+    margin-top: 2.5%;
+    margin-left: 25%;
+  }
+}
+.menu-section-2__invisible-box h3 {
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-section-2__invisible-box h3 {
+    max-width: 768px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-section-2__invisible-box h3 {
+    max-width: 1024px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-section-2__invisible-box h3 {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-section-2__invisible-box h3 {
+    min-width: 100%;
+    margin-left: 25%;
+  }
+}
+.menu-section-2__invisible-box .box_trait {
+  width: 9%;
+  margin-top: 1%;
+  margin-left: 5%;
+  border: 1.8px solid #99E2D0;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .menu-section-2__invisible-box .box_trait {
+    width: 4.5%;
+    margin-top: 0.3%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-section-2__invisible-box .box_trait {
+    width: 3%;
+    margin-top: 0.3%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu-section-2__invisible-box .box_trait {
+    width: 2%;
+    margin-top: 0.3%;
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .menu-section-2__invisible-box .box_trait {
+    width: 2%;
+    margin-top: 0.3%;
+    margin-left: 25%;
+  }
+}
+
+.card-box {
+  width: 100%;
+  margin-top: 3%;
+}
+.card-box .menu__dishe {
+  width: 350px;
+  min-width: 100%;
+  margin-bottom: 1.3%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.card-box .card__dishe {
+  width: 350px;
+  height: 69px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px #c3c3c4;
+}
+.card-box .card__dishe > h3 {
+  margin-top: 5%;
+  margin-left: 3%;
+  font-weight: bold;
+  font-size: 16px;
+}
+.card-box .card__dishe > p {
+  margin-top: 2%;
+  margin-left: 3%;
+  font-size: 12px;
+}
+.card-box .card__dishe .price {
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  left: 80%;
+  bottom: 35%;
+}
+
+.box-button {
+  width: 100%;
+  margin-top: 11%;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .box-button {
+    max-width: 768px;
+    min-width: 100%;
+    margin-top: 6.2%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .box-button {
+    max-width: 1024px;
+    min-width: 100%;
+    margin-top: 4.5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .box-button {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-top: 3%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .box-button {
+    min-width: 100%;
+    margin-top: 3%;
+  }
+}
+.box-button .order__button {
+  width: 185px;
+  height: 47px;
+  margin-bottom: 16%;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(176deg, #FF79DA 3%, #9356DC 120%);
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0px 3px 5px #c3c3c4;
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .box-button .order__button {
+    width: 185px;
+    margin-bottom: 7.6%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .box-button .order__button {
+    width: 185px;
+    margin-bottom: 6%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .box-button .order__button {
+    width: 185px;
+    margin-bottom: 3.9%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .box-button .order__button {
+    width: 185px;
+    margin-bottom: 3.5%;
+  }
+}
+.box-button .order__button a {
+  color: white;
+  text-decoration: none;
+}
+
+.invisible-box-section-3 {
+  max-width: 480px;
+  min-width: 100%;
+  margin-top: 0%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: #f6f6f6;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-section-3 {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    height: 1301px;
-    margin-top: 3%;
-    align-items: center;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .invisible-box-section-3 {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    height: 1235px;
-    margin-top: 3%;
-    align-items: center;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .invisible-box-section-3 {
+    max-width: 1600px;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-section-3 {
+    min-width: 100%;
   }
 }
 .invisible-box-section-3 h2 {
-  /* Parametre du h2 */
-  margin-top: 15%;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+  margin-top: 14.5%;
+  margin-left: 5%;
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .invisible-box-section-3 h2 {
+    max-width: 768px;
+    min-width: 100%;
+    margin-top: 8%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .invisible-box-section-3 h2 {
+    max-width: 1024px;
+    min-width: 100%;
     margin-top: 5%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
   .invisible-box-section-3 h2 {
-    margin-top: 3%;
+    max-width: 1600px;
+    min-width: 100%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .invisible-box-section-3 h2 {
+    min-width: 100%;
+    margin-top: 5%;
+    margin-left: 25%;
   }
 }
 
 .box-card {
-  /* Parametre de la boite pour les cartes */
   max-width: 480px;
   height: 1062px;
   margin: 0 auto;
   margin-top: 6%;
+  margin-bottom: 17%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .box-card {
-    max-width: 959px;
+    max-width: 768px;
     min-width: 100%;
-    margin-top: 3%;
+    margin-bottom: 10%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .box-card {
-    max-width: 1280px;
+    max-width: 1024px;
     min-width: 100%;
-    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .box-card {
+    max-width: 1600px;
+    min-width: 100%;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .box-card {
+    min-width: 100%;
+    margin-bottom: 3%;
   }
 }
 .box-card .card {
-  /* Parametre de carte voir card.scss */
   width: 335px;
   height: 250px;
   border-radius: 15px;
@@ -651,8 +1082,8 @@ body {
   bottom: 95%;
   left: 73%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
   font-weight: 500;
   color: #008766;
@@ -700,531 +1131,109 @@ body {
   font-weight: 900;
 }
 
-/* *************************************** */
-/* **************** Body ***************** */
-/* *************************************** */
-.body-size-menu-a {
-  /* Parametre de la page pour les menus */
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .body-size-menu-a {
-    max-width: 959px;
-    min-width: 100%;
-    height: 1580px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .body-size-menu-a {
-    max-width: 1280px;
-    min-width: 100%;
-  }
-}
-
-.body-size-menu-b {
-  /* Hauteur de la page pour le menu "La note enchantée" */
-  height: 1726px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .body-size-menu-b {
-    max-width: 1280px;
-    min-width: 100%;
-    height: 1720px;
-  }
-}
-
-/* *************************************** */
-/* **************** Main ***************** */
-/* *************************************** */
-.menu {
-  /* Paramétre du main pour les menus*/
+footer {
   max-width: 480px;
-  height: 1391px;
-  background-color: #f6f6f6;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+  min-width: 100%;
+  color: white;
+  background-color: #353535;
+  border: 1px solid #353535;
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu {
-    max-width: 959px;
-    min-width: 100%;
-    height: 1320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu {
-    max-width: 1280px;
-    min-width: 100%;
-    height: 1385px;
-  }
-}
-
-.menu-b {
-  /* Paramétre du main pour le menu "La note enchantée"*/
-  height: 1489px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-b {
-    max-width: 959px;
-    min-width: 100%;
-    height: 1459px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-b {
-    max-width: 1280px;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  footer {
+    max-width: 768px;
     min-width: 100%;
   }
 }
-
-.main__picture {
-  /* Parametre de la boite pour la photo principale*/
-  width: 100%;
-  height: 220px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .main__picture {
-    display: flex;
-    justify-content: center;
-  }
-}
-.main__picture img {
-  /* Parametre de la photo principale*/
-  width: 100%;
-  height: 275px;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 1;
-  object-fit: cover;
-}
-
-/* *************************************** */
-/* ************* Section 1 *************** */
-/* *************************************** */
-.menu-a-section-1__invisible-box {
-  /* Parametre de la boite invisible */
-  height: 80px;
-  position: relative;
-  z-index: 2;
-  border-radius: 35px 35px 0px 0px;
-  background-color: #f6f6f6;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-1__invisible-box {
-    max-width: 959px;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    max-width: 1024px;
     min-width: 100%;
-    display: flex;
-    justify-content: center;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-1__invisible-box {
-    display: flex;
-    justify-content: center;
-  }
-}
-.menu-a-section-1__invisible-box .restaurant__box {
-  /* Parametre de la boite pour le nom du restaurant et l'icone coeur*/
-  width: 330px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-1__invisible-box .restaurant__box {
-    justify-content: space-around;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-1__invisible-box .restaurant__box {
-    justify-content: space-around;
-  }
-}
-.menu-a-section-1__invisible-box h2 {
-  margin-top: 10%;
-  margin-left: 5%;
-}
-.menu-a-section-1__invisible-box .restaurant__icon {
-  height: 29px;
-  margin-top: 10%;
-  display: flex;
-  align-items: center;
-}
-
-/* *************************************** */
-/* ************* Section 2 *************** */
-/* *************************************** */
-.menu-a-section-2__invisible-box {
-  /* Parametre de la boite invisible */
-  width: 100%;
-  height: 1010px;
-  background-color: #f6f6f6;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box {
-    max-width: 959px;
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  footer {
+    max-width: 1600px;
     min-width: 100%;
-    height: 1120px;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box {
-    max-width: 1280px;
+@media only screen and (min-width: 1600px) {
+  footer {
     min-width: 100%;
-    height: 1245px;
   }
 }
-.menu-a-section-2__invisible-box--size-menu-b {
-  /* Parametre de la boite invisible pour le menu "La note enchantée" */
-  height: 1185px;
-  border: 0.1px solid #f6f6f6;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+footer .footer-title {
+  margin-left: 6%;
+  margin-top: 4%;
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box--size-menu-b {
-    max-width: 959px;
-    min-width: 100%;
-    height: 1158px;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box--size-menu-b {
-    max-width: 1280px;
-    min-width: 100%;
-    height: 1185px;
-  }
-}
-.menu-a-section-2__invisible-box--margin-top-menu-b {
-  /* Margin pour "Entrées" du menu "La note enchantée" */
-  margin-top: 3.8% !important;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box--margin-top-menu-b {
-    margin-top: 3.2% !important;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box--margin-top-menu-b {
-    margin-top: 3% !important;
-  }
-}
-.menu-a-section-2__invisible-box--margin-top-2-menu-b {
-  /* Margin pour "Plats" du menu "La note enchantée" */
-  margin-top: 7% !important;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box--margin-top-2-menu-b {
-    margin-top: 4.7% !important;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box--margin-top-2-menu-b {
-    margin-top: 1% !important;
-  }
-}
-.menu-a-section-2__invisible-box--margin-top-3-menu-b {
-  /* Margin pour "Dessert" du menu "La note enchantée" */
-  margin-top: 10.6% !important;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box--margin-top-3-menu-b {
-    margin-top: 7% !important;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box--margin-top-3-menu-b {
-    margin-top: 2.4% !important;
-  }
-}
-.menu-a-section-2__invisible-box h3 {
-  /* Parametre des titres entrees,plats,dessert */
+footer .link-list {
+  height: 96px;
   margin-top: 4%;
   margin-left: 6%;
-  font-weight: 300;
-  font-size: 14px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box h3 {
-    margin-top: 3%;
-    margin-left: 0%;
-    display: flex;
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box h3 {
-    margin-top: 3%;
-    margin-left: 0%;
-    display: flex;
-    justify-content: center;
-  }
-}
-.menu-a-section-2__invisible-box .menu-a-section-2__invisible-box--margin-top {
-  /* Margin pour "Plats" des menu */
-  margin-top: 12%;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box .menu-a-section-2__invisible-box--margin-top {
-    max-width: 959px;
-    min-width: 100%;
-    margin-top: 5%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box .menu-a-section-2__invisible-box--margin-top {
-    max-width: 1280px;
-    min-width: 100%;
-    margin-top: 3%;
-  }
-}
-.menu-a-section-2__invisible-box .box_trait {
-  /*Parametre de la boite pour le trait qui souligne entree,plats,dessert */
-  width: 9%;
-  height: auto;
-  margin-top: 2%;
-  margin-left: 6%;
-  border: 1.8px solid #99E2D0;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .menu-a-section-2__invisible-box .box_trait {
-    margin: 0 auto;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .menu-a-section-2__invisible-box .box_trait {
-    margin: 0 auto;
-  }
-}
-
-.card-box--modify-size-menu-b {
-  /* Parmetre de la boite qui contient les entrees pour le menu "La note enchantée"  */
-  width: 100%;
-  height: 330px !important;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .card-box--modify-size-menu-b {
-    max-width: 959px;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .card-box--modify-size-menu-b {
-    max-width: 1280px;
-  }
-}
-
-.card-box {
-  /* Parametre de la boite pour menu__dishe */
-  width: 100%;
-  height: 233px;
-  margin-top: 3%;
+  margin-bottom: 12%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
 }
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .card-box {
-    max-width: 959px;
-    min-width: 100%;
-    margin-top: 1%;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .card-box {
-    max-width: 1280px;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  footer .link-list {
+    max-width: 768px;
     min-width: 100%;
     margin-top: 2%;
+    margin-bottom: 5%;
   }
 }
-.card-box .menu__dishe {
-  /* Parametre des boites qui contient les cartes dans entrees,plats,dessert */
-  width: 350px;
-  height: 233px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card-box .menu__dishe--modify-size-menu-b {
-  /* Parametre des boites qui contient les cartes dans entrees,plats,dessert du menu "La note enchantée" */
-  width: 350px;
-  height: 314px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card-box .card__dishe {
-  /* Parametre de l'interieur des cartes */
-  width: 100%;
-  height: 69px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0px 3px 5px #c3c3c4;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .card-box .card__dishe {
-    max-width: 959px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .card-box .card__dishe {
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.card-box .card__dishe > h3 {
-  /* Parametre des titres à l'intérieur des cartes */
-  margin-top: 5%;
-  margin-left: 3%;
-  font-weight: bold;
-  font-size: 16px;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .card-box .card__dishe > h3 {
-    margin-left: 3%;
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .card-box .card__dishe > h3 {
-    margin-left: 3%;
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-.card-box .card__dishe > p {
-  /* Parametre du texte à l'intérieur des cartes */
-  margin-top: 2%;
-  margin-left: 3%;
-  font-size: 12px;
-}
-.card-box .card__dishe .price {
-  /* Parametre des prix à l'intérieur des cartes */
-  position: relative;
-  font-weight: bold;
-  font-size: 16px;
-  left: 80%;
-  bottom: 35%;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .card-box .card__dishe .price {
-    max-width: 959px;
-    left: 85%;
-    bottom: 55%;
-  }
-}
-
-.box-button-menu-b {
-  /* Parametre de la boite du bouton du menu "La note enchantée" */
-  margin-top: 11% !important;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .box-button-menu-b {
-    max-width: 959px;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .link-list {
+    max-width: 1024px;
     min-width: 100%;
-    margin-top: 28px !important;
+    margin-top: 2%;
+    margin-bottom: 5%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .box-button-menu-b {
-    max-width: 1280px;
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  footer .link-list {
+    max-width: 1600px;
     min-width: 100%;
-    margin-top: 0.6% !important;
+    margin-top: 2%;
+    margin-bottom: 5%;
   }
 }
-
-.box-button {
-  /* Parametre de la boite du bouton des menu */
-  width: 100%;
-  margin-top: 11%;
-  display: flex;
-  justify-content: center;
-  /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-  /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .box-button {
-    max-width: 959px;
+@media only screen and (min-width: 1600px) {
+  footer .link-list {
     min-width: 100%;
-    margin-top: 27px;
+    margin-top: 1%;
+    margin-bottom: 3%;
   }
 }
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .box-button {
-    max-width: 1280px;
-    min-width: 100%;
-    margin-top: 0.5%;
+footer .link-list .link-list--margin-1 {
+  margin-left: 2%;
+  display: inline-block;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  footer .link-list .link-list--margin-1 {
+    margin-left: 1.2%;
   }
 }
-.box-button .order__button {
-  /* Parametre du bouton voir dans btn.scss*/
-  width: 185px;
-  height: 47px;
-  margin-top: 3.5%;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(176deg, #FF79DA 3%, #9356DC 120%);
-  border: none;
-  border-radius: 35px;
-  box-shadow: 0px 3px 5px #c3c3c4;
-  text-decoration: none;
-  color: white;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .link-list .link-list--margin-1 {
+    margin-left: 1%;
+  }
 }
-.box-button .order__button a {
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  footer .link-list .link-list--margin-1 {
+    margin-left: 0.8%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  footer .link-list .link-list--margin-1 {
+    margin-left: 0.65%;
+  }
+}
+footer .link-list .link-list--margin-2 {
+  margin-left: 0.2%;
+  display: inline-block;
+}
+footer .link-list a {
   color: white;
   text-decoration: none;
 }

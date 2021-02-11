@@ -1,10 +1,20 @@
-/* *************************************** */
-/* *************** General *************** */
-/* *************************************** */
+// ***************************************
+// *************** General ***************
+// ***************************************
 
 
 * {
-    /* Retire la marge et le padding par défault */
+    // Retire la marge et le padding par défault
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif, "Arial", "Verdana", "sans-serif";
@@ -13,11 +23,11 @@
 h1,
 .restaurant__name,
 .footer-title {
-    /* Police pour h1 et .footer-tittle */
+    // Police pour h1 et .footer-tittle
     font-family: "Shrikhand", cursive, "Arial", "Verdana", "sans-serif";
 }
 
 .link-list {
-    /* Enleve les puces sur la liste */
+    // Enleve les puces sur la liste
     list-style: none;
 }

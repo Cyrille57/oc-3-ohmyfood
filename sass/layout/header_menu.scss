@@ -1,0 +1,49 @@
+// ***************************************
+// ********* HEADER menu.html ************
+// ***************************************
+
+
+.menu-invisible-box-header {
+    //Parametre de la boite invisible
+
+    //Width:
+    @include max-min-width($mobile);
+
+    height: 63px;
+
+    // Flexbox:
+    @include flex-align-item-center-justify-content-center;
+
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
+
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
+
+    @include pc {
+        @include max-min-width($pc);
+    }
+
+    @include pc-xl {
+        min-width: $full;
+    }
+
+    .menu-title {
+        //Parametre de la boite pour le titre et l'icone fléche
+
+        display: flex;
+
+        a {
+            //Parametre de l'icone return
+
+            position: relative;
+            top: 16px;
+            right: 32%;
+
+            color: black;
+        }
+    }
+}

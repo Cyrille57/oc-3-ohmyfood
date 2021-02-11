@@ -1,0 +1,27 @@
+// ***************************************
+// ********** BODY INDEX.SCSS ************
+// ***************************************
+
+
+body {
+    // Parametre de la page index.html
+
+    @include max-min-width($mobile);
+
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
+
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
+
+    @include pc {
+        @include max-min-width($pc);
+    }
+
+    @include pc-xl {
+        min-width: $full;
+    }
+}

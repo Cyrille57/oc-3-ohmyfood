@@ -1,88 +1,113 @@
-/* *************************************** */
-/* *************** Footer **************** */
-/* *************************************** */
+// ***************************************
+// *************** Footer ****************
+// ***************************************
 
 
 footer {
-    /* Parametre de la boite invisible */
-    max-width: 480px;
-    min-width: 100%;
-    height: 196px;
+    // Parametre de la boite invisible
+
+    @include max-min-width($mobile);
 
     color: white;
     background-color: $footer-color;
     border: 1px solid $footer-color;
 
-    /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-    @include mobile-landscape-tablet;
+    // Media Queries:
+    @include mobile-landscape-tablet {
+        @include max-min-width($mobile-landscape-tablet);
+    }
 
+    @include tablet-landscape {
+        @include max-min-width($tablet-landscape);
+    }
 
-    /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-    @include tablet-landscape-pc;
+    @include pc {
+        @include max-min-width($pc);
+    }
 
+    @include pc-xl {
+        min-width: $full;
+    }
 
     .footer-title {
-        /* Parametre du h2 */
+        // Parametre du h2
+
         margin-left: 6%;
         margin-top: 4%;
-
-        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-        @include tablet {
-            margin-top: 2%;
-        }
-
-        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-        @include pc {
-            margin-top: 2%;
-        }
     }
 
     .link-list {
-        /* Parametre de la boite pour les li */
+        // Parametre de la boite pour les li
+
         height: 96px;
         margin-top: 4%;
         margin-left: 6%;
+        margin-bottom: 12%;
 
+        //Flexbox:
         @include flex-direction-column-justify-space-between;
 
-        /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-        @include tablet {
-            margin-top: 1%;
-        }
-
-        /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
-        @include pc {
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            @include max-min-width($mobile-landscape-tablet);
             margin-top: 2%;
+            margin-bottom: 5%;
         }
 
+        @include tablet-landscape {
+            @include max-min-width($tablet-landscape);
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+        @include pc {
+            @include max-min-width($pc);
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+        @include pc-xl {
+            min-width: $full;
+            margin-top: 1%;
+            margin-bottom: 3%;
+        }
 
         .link-list--margin-1 {
-            /* Parametre de la marge pour le premier li */
+            // Parametre de la marge pour le premier li
+
             margin-left: 2%;
 
             display: inline-block;
 
-            /* Pour écrans entre 480px et 959px (Portable en paysage, tablette en portrait et petite tablette en paysage) */
-            @include tablet {
-                margin-left: 1.6%;
+            // Media Queries:
+            @include mobile-landscape-tablet {
+                margin-left: 1.2%;
             }
 
-            /* Pour écrans entre 959px et 1280px (Tablette en paysage, écran d’ordinateur de taille petite et moyenne) */
+            @include tablet-landscape {
+                margin-left: 1%;
+            }
+
             @include pc {
-                margin-left: 0.7%;
+                margin-left: 0.8%;
             }
 
+            @include pc-xl {
+                margin-left: 0.65%;
+            }
         }
 
         .link-list--margin-2 {
-            /* Parametre de la marge pour le second li */
+            // Parametre de la marge pour le second li
+
             margin-left: 0.2%;
 
             display: inline-block;
         }
 
         a {
-            /* Parametre du lien */
+            // Parametre du lien
+
             color: white;
             text-decoration: none;
         }
