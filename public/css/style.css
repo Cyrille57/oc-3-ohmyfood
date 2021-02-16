@@ -706,6 +706,7 @@ body {
 }
 .menu-section-2__invisible-box--margin-top {
   margin-top: 11%;
+  margin-left: 5%;
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .menu-section-2__invisible-box--margin-top {
@@ -768,7 +769,6 @@ body {
   }
 }
 .menu-section-2__invisible-box h3 {
-  margin-left: 5%;
   font-weight: 400;
   font-size: 14px;
 }
@@ -849,24 +849,73 @@ body {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 3px 5px #c3c3c4;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
 }
-.card-box .card__dishe > h3 {
+.card-box .card__dishe .name {
+  width: 90%;
+  min-widht: 30%;
+  height: 100%;
+  margin-left: 0%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-box .card__dishe .name > h3 {
+  width: 100%;
+  min-width: 50%;
+  height: 20px;
   margin-top: 5%;
-  margin-left: 3%;
+  margin-bottom: 0%;
+  margin-left: 4%;
+  text-overflow: ellipsis;
   font-weight: bold;
   font-size: 16px;
 }
-.card-box .card__dishe > p {
-  margin-top: 2%;
-  margin-left: 3%;
+.card-box .card__dishe .name > p {
+  width: 100%;
+  min-width: 50%;
+  height: 20px;
+  margin-bottom: 0.3%;
+  margin-top: 0%;
+  margin-left: 4%;
   font-size: 12px;
+  text-overflow: ellipsis;
 }
 .card-box .card__dishe .price {
-  position: relative;
+  width: 10%;
+  height: 100%;
+  margin-top: 11%;
   font-weight: bold;
   font-size: 16px;
-  left: 80%;
-  bottom: 35%;
+}
+.card-box .card__dishe .anim {
+  width: 1%;
+  height: 100%;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0%;
+  left: 1%;
+  transition: all 720ms ease;
+}
+.card-box .card__dishe .anim i {
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  transform: rotate(20deg);
+  transition: all 720ms ease-out;
+}
+.card-box .card__dishe:hover > .anim {
+  height: 100%;
+  width: 59px;
+  left: 0%;
+}
+.card-box .card__dishe:hover > .anim > i {
+  transform: rotate(360deg);
+  opacity: 1;
 }
 
 .box-button {
