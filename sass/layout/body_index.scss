@@ -25,3 +25,63 @@ body {
         min-width: $full;
     }
 }
+
+
+.wrapper {
+    // Creation de la page loader
+
+    // Animation qui fait apparaitre le loader en fond:
+    @include load;
+}
+
+.spinner {
+    // Creation du spinner
+
+    width: 65px;
+    height: 70px;
+
+    margin: $margin-center;
+
+    //Positionnement:
+    position: absolute;
+    top: 54%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+
+    //Flexbox:
+    @include flex-align-item-center-justify-content-center;
+
+    //Mise en forme du spinner:
+    border: 10px solid transparent;
+    border-top: 10px solid $secondary-color;
+    border-bottom: 10px solid $primary-color;
+    border-radius: 50%;
+
+    // Animations qui fait apparaitre le spinner:
+    @include spinner;
+
+        // Media Queries:
+        @include mobile-landscape-tablet {
+            @include max-min-width($mobile-landscape-tablet);
+        }
+    
+        @include tablet-landscape {
+            @include max-min-width($tablet-landscape);
+        }
+    
+        @include pc {
+            @include max-min-width($pc);
+        }
+    
+        @include pc-xl {
+            min-width: $full;
+        }
+
+    >i {
+        // Parametre de l'icone
+
+        font-size: 32px;
+        font-weight: bold;
+    }
+}

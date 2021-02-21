@@ -42,23 +42,28 @@
 ///////////////////////////////////////
 
 // Width:
-@mixin max-min-width($max-width){
+@mixin max-min-width($max-width) {
     max-width: $max-width;
     min-width: $full;
 }
-@mixin max-min-width-full{
+
+@mixin max-min-width-full {
     max-width: $full;
     min-width: $full;
 }
+
 // Width order__button:
-@mixin width-order__button{
+@mixin width-height-order__button {
     width: 185px;
+    height: 50px;
 }
+
 //Width et height button_operation:
 @mixin width-height-button_operation {
     width: 325px;
     height: 73px;
 }
+
 //Width et Height Button:
 @mixin width-height-button_section1 {
     width: 218px;
@@ -74,12 +79,13 @@
 
 // Mixin flexbox:
 // Display, flexdirection:column et align-items :
-@mixin flex-direction-column-align-items-center{
+@mixin flex-direction-column-align-items-center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@mixin flex-direction-column-justify-space-around{
+
+@mixin flex-direction-column-justify-space-around {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -98,12 +104,14 @@
     flex-direction: column;
     justify-content: space-between;
 }
-@mixin flex-align-item-center-justify-content-space-around{
-    display:flex;
+
+@mixin flex-align-item-center-justify-content-space-around {
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
-@mixin flex-direction-column-align-items-flex-start{
+
+@mixin flex-direction-column-align-items-flex-start {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -112,6 +120,9 @@
 @mixin gradient-heart {
     background-color: linear-gradient(45deg, $secondary-color 100%, $primary-color 100%);
 }
+
+
+
 
 //@mixin card-box-size ($restaurant, $restaurant-name: $restaurant-name)
 //{

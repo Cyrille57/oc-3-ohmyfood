@@ -3,6 +3,7 @@
 // ***************************************
 
 
+
 .menu-section-2__invisible-box {
     // Parametre de la boite invisible
 
@@ -181,11 +182,29 @@
         //Changer la forme du curseur
         cursor: pointer;
 
+
+        // Animations qui fait apparaitre en decalage les entrées,plats,desserts
+        &--anim-shift-1{
+        @include shift (0.2s);
+        }
+
+        &--anim-shift-2{
+            @include shift (0.7s);
+        }
+
+        &--anim-shift-3 {
+            @include shift (1.1s);
+        }
+
+        &--anim-shift-4 {
+            @include shift (1.6s);
+        }
+
         display: flex;
+        justify-content: space-between;
 
         .name {
-            width: 90%;
-            min-widht: 30%;
+            width: 78%;
             height: 100%;
             margin-left: 0%;
 
@@ -195,32 +214,34 @@
             >h3 {
                 // Parametre des titres à l'intérieur des cartes
                 width: 100%;
-                min-width: 50%;
-                height: 20px;
+                height: 25%;
                 margin-top: 5%;
                 margin-bottom: 0%;
                 margin-left: 4%;
 
-                //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
-                text-overflow: ellipsis;
-
                 font-weight: bold;
                 font-size: 16px;
+
+                //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
 
             >p {
                 // Parametre du texte à l'intérieur des cartes
                 width: 100%;
-                min-width: 50%;
-                height: 20px;
+                height: 25%;
                 margin-bottom: 0.3%;
                 margin-top: 0%;
                 margin-left: 4%;
 
-                font-size: 12px;
+                font-size: 14px;
 
                 //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
                 text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
 
@@ -228,6 +249,10 @@
             width: 10%;
             height: 100%;
             margin-top: 11%;
+            //margin-left: 2%;
+
+            display: flex;
+            justify-content: center;
 
             font-weight: bold;
             font-size: 16px;
@@ -237,12 +262,10 @@
             width: 1%;
             height: 100%;
 
-            background-color: #99E2D0;
+            background-color: $tertiary-color;
 
             // positionne l'icone dans le span
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-align-item-center-justify-content-center;
 
             // positionne le carre a cote du bouton
             position: relative;
@@ -265,10 +288,25 @@
         }
 
         &:hover>.anim {
-            //etat de la largeur a l'arrivé
+            //Etat de la largeur a l'arrivé
             height: 100%;
-            width: 59px;
+            width: 20%;
             left: 0%;
+        }
+
+        &:hover .name{
+            width: 60%;
+        }
+        &:hover .name>h3 {
+           // width: 73%;
+        }
+
+        &:hover .name>p {
+            //width: 86%;
+        }
+
+        &:hover>.price {
+            width: 10%;
         }
 
         &:hover>.anim>i {

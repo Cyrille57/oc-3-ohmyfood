@@ -1,0 +1,105 @@
+// ***************************************
+// ************** Keyframes **************
+// ***************************************
+
+
+@mixin anim-load {
+    //Animation de la page qui se charge:
+
+    @keyframes anim-load {
+        0% {
+            background: $tertiary-color;
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin anim-spinner {
+    //Animation du spinner:
+
+    @keyframes anim-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        99% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            visibility: hidden;
+        }
+    }
+}
+
+@mixin anim-shift {
+    // Animation qui fait apparaitre un à un les cartes entrées-plats-desserts:
+
+    @keyframes anim-shift {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+
+// ***************************************
+// ************** Animations *************
+// ***************************************
+
+
+@mixin load {
+
+    //Declaration de l'animation:
+    animation-name: anim-load;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+    //Animations:
+    @include anim-load;
+
+}
+
+@mixin spinner {
+
+    //Declaration de l'animation:
+    animation-name: anim-spinner;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: both;
+
+    //Animations:
+    @include anim-spinner;
+}
+
+@mixin shift ($delay) {
+
+    //Declaration de l'animation:
+    animation-name: anim-shift;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: $delay;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+    //Animations:
+    @include anim-shift;
+}
+
+
+
+
