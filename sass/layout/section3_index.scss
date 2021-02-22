@@ -101,7 +101,6 @@
         @include card
     }
 
-
     .heart {
 
         position: relative;
@@ -116,4 +115,5 @@
         font-weight: 900;
         @include heart;
     }
+
 }
