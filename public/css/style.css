@@ -1352,7 +1352,7 @@ body {
   top: 0%;
   font-size: 50px;
   color: black;
-  pointer-events: fill;
+  pointer-events: stroke;
 }
 .box-card .heart:hover {
   font-weight: 900;
