@@ -1005,7 +1005,7 @@ body {
   }
 }
 .card-box .card__dishe .name {
-  width: 78%;
+  width: 61%;
   height: 100%;
   margin-left: 0%;
   display: flex;
@@ -1021,7 +1021,6 @@ body {
   font-size: 16px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 .card-box .card__dishe .name > p {
   width: 100%;
@@ -1069,6 +1068,16 @@ body {
 }
 .card-box .card__dishe:hover .name {
   width: 60%;
+}
+.card-box .card__dishe:hover .name > h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-box .card__dishe:hover .name > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card-box .card__dishe:hover > .price {
   width: 10%;
@@ -1343,6 +1352,7 @@ body {
   top: 0%;
   font-size: 50px;
   color: black;
+  pointer-events: fill;
 }
 .box-card .heart:hover {
   font-weight: 900;

@@ -184,11 +184,11 @@
 
 
         // Animations qui fait apparaitre en decalage les entrées,plats,desserts
-        &--anim-shift-1{
-        @include shift (0.2s);
+        &--anim-shift-1 {
+            @include shift (0.2s);
         }
 
-        &--anim-shift-2{
+        &--anim-shift-2 {
             @include shift (0.7s);
         }
 
@@ -204,12 +204,14 @@
         justify-content: space-between;
 
         .name {
-            width: 78%;
+            width: 61%;
             height: 100%;
             margin-left: 0%;
 
             display: flex;
             flex-wrap: wrap;
+
+
 
             >h3 {
                 // Parametre des titres à l'intérieur des cartes
@@ -225,7 +227,7 @@
                 //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                overflow: hidden;
+
             }
 
             >p {
@@ -294,15 +296,22 @@
             left: 0%;
         }
 
-        &:hover .name{
+        &:hover .name {
             width: 60%;
         }
+
         &:hover .name>h3 {
-           // width: 73%;
+            //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         &:hover .name>p {
-            //width: 86%;
+            //définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         &:hover>.price {
