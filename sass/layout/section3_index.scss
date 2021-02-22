@@ -101,15 +101,19 @@
         @include card
     }
 
+
     .heart {
+
+        position: relative;
+        top: 0%;
+
         font-size: 50px;
-        transition: 0.5s;
+
+        color: black;
     }
 
     .heart:hover {
-        background: linear-gradient($secondary-color, $primary-color);
-        background-clip: text;
-        color: transparent;
         font-weight: 900;
+        @include heart;
     }
 }

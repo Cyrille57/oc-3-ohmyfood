@@ -71,7 +71,7 @@
         //Flexbox:
         @include flex-align-item-center-justify-content-center;
 
-        background-color: #eaeaea;
+        background-color: $location-color;
         box-shadow: inset 0px 2px 2px #c9c8c8;
 
         // Media Queries:
@@ -124,6 +124,10 @@
             width: 37%;
             height: 47px;
 
+            background-color: $location-color;
+            text-align: center;
+            border: none;
+
             //Flexbox:
             @include flex-align-item-center-justify-content-space-around;
 
@@ -145,6 +149,9 @@
             @include pc-xl {
                 width: 9%;
             }
+        }
+        .location__text:focus{
+            outline-style: none;
         }
     }
 }

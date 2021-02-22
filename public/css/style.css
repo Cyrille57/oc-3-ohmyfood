@@ -153,6 +153,9 @@ h1,
 .invisible-box-header .location .location__text {
   width: 37%;
   height: 47px;
+  background-color: #eaeaea;
+  text-align: center;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -177,6 +180,9 @@ h1,
   .invisible-box-header .location .location__text {
     width: 9%;
   }
+}
+.invisible-box-header .location .location__text:focus {
+  outline-style: none;
 }
 
 .menu-invisible-box-header {
@@ -542,6 +548,10 @@ body {
     margin-bottom: 5%;
   }
 }
+.section-1__invisible-box .section1__button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 10px 10px #c3c3c4;
+}
 .section-1__invisible-box a {
   text-decoration: none;
   color: white;
@@ -573,6 +583,23 @@ body {
   margin-right: 7.5%;
   display: flex;
   align-items: center;
+}
+.menu-section-1__invisible-box .restaurant__icon .heart:hover {
+  font-weight: 900;
+  animation-name: anim-heart;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes anim-heart {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #ff79da;
+  }
 }
 
 .invisible-box-section-2 {
@@ -1129,6 +1156,10 @@ body {
     margin-bottom: 3.5%;
   }
 }
+.box-button .order__button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 10px 10px #c3c3c4;
+}
 .box-button .order__button a {
   color: white;
   text-decoration: none;
@@ -1308,14 +1339,27 @@ body {
   font-size: 26px;
 }
 .box-card .heart {
+  position: relative;
+  top: 0%;
   font-size: 50px;
-  transition: 0.5s;
+  color: black;
 }
 .box-card .heart:hover {
-  background: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
-  color: transparent;
   font-weight: 900;
+  animation-name: anim-heart;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes anim-heart {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #ff79da;
+  }
 }
 
 footer {

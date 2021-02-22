@@ -39,5 +39,10 @@
 
         display: flex;
         align-items: center;
+
+        .heart:hover {
+            font-weight: 900;
+            @include heart;
+        }
     }
 }

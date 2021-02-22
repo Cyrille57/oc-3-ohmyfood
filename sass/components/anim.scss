@@ -47,8 +47,23 @@
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
+        }
+    }
+}
+
+@mixin anim-heart {
+
+    // Animation qui colore le coeur:
+    @keyframes anim-heart {
+        0% {
+            color: transparent;
+        }
+
+        100% {
+            color: $secondary-color;
         }
     }
 }
@@ -100,6 +115,16 @@
     @include anim-shift;
 }
 
+@mixin heart {
 
+    //Declaration de l'animation:
+    animation-name: anim-heart;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 
-
+    //Animations:
+    @include anim-heart;
+}
