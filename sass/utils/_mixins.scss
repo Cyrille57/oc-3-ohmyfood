@@ -121,22 +121,3 @@
     background-color: linear-gradient(45deg, $secondary-color 100%, $primary-color 100%);
 }
 
-
-
-
-//@mixin card-box-size ($restaurant, $restaurant-name: $restaurant-name)
-//{
-//    @if ($restaurant!= $restaurant-name)
-//    {
-//        .card-box {
-//        height: 235px;
-//        }
-//    }
-//
-//   @else
-//    {
-//        .card-box {
-//        height: 350px;
-//        }
-//    }
-//}

@@ -1280,20 +1280,6 @@ body {
   height: 250px;
   border-radius: 15px;
   box-shadow: 0px 3px 5px #c3c3c4;
-  /*
-      &__info-icon {
-          width: 20%;
-
-          display: flex;
-
-          i {
-              margin-top: 22px;
-              margin-left: 26%;
-
-              font-size: 26px;
-          }
-      }
-      */
 }
 .box-card .card a {
   width: 335px;

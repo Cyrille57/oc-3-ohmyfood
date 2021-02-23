@@ -55,8 +55,8 @@
 }
 
 @mixin anim-heart {
-
     // Animation qui colore le coeur:
+
     @keyframes anim-heart {
         0% {
             color: transparent;
@@ -85,7 +85,6 @@
 
     //Animations:
     @include anim-load;
-
 }
 
 @mixin spinner {
