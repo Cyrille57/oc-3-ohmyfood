@@ -18,6 +18,20 @@
   Pour ce faire les maquettes, accompagné d'un <a href="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf">brief</a> dans lequel je retrouve la charte graphique et les consignes du livrables attendues, me sont fournies.
 </p>
 
+<h2> Général:</h2>
+
+<ul>
+  <li>
+    L’ensemble du site devra être responsive sur mobile, tablette et desktop.
+  </li>
+  <li>
+    Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
+  </li>
+  <li>
+    Les pages devront passer la validation W3C en <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcyrille57.github.io%2FCyrilleMorel_3_28012021%2F">HTML</a> et <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcyrille57.github.io%2FCyrilleMorel_3_28012021%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">CSS</a> sans erreur.
+  </li>
+  </ul>
+  
 <h2> Technologies demandées: </h2>
 
 <p> Uniquement en Html et Css avec le préprocesseurs Sass, pas de framework.
