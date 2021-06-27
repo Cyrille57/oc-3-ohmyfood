@@ -18,7 +18,7 @@
   Pour ce faire les maquettes, accompagné d'un <a href="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf">brief</a> dans lequel je retrouve la charte graphique et les consignes du livrables attendues, me sont fournies.
 </p>
 
-<h2> Général:</h2>
+<h2>🔎 Général:</h2>
 
 <ul>
   <li>
