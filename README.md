@@ -1,4 +1,4 @@
-# Projet OpenClassrooms / P3 Ohmyfood
+# 📢 Projet OpenClassrooms / P3 Ohmyfood
 
 <p> 
   Dans le cadre de ma formation développeur web avec OpenClassrooms, différents projets sont à realiser.
@@ -32,11 +32,11 @@
   </li>
   </ul>
   
-<h2> Technologies demandées: </h2>
+<h2>⚡ Technologies demandées: </h2>
 
 <p> Uniquement en Html et Css avec le préprocesseurs Sass, pas de framework.
 
-<h2> Les consignes / fonctionnalités: </h2>
+<h2>📝 Les consignes / fonctionnalités: </h2>
 
 <h3>Page d’accueil (x1)</h3>
 
@@ -119,5 +119,31 @@ Pour cette première version, l’effet peut être apparaître au survol sur des
 <p>
   Pour voir le livrable et le tester, c'est par <a href="https://cyrille57.github.io/CyrilleMorel_3_28012021/">ici</a>
 </p>
-<h2> Contact </h2>
-<p> Vous pouvez me contacter sur <a href="https://discord.gg/At8T9HD">discord</a>, <a href="https://twitter.com/Cyril2101">twitter</a> et <a href="mailto:cyril_dev@outlook.fr">mail</a>
+
+<h2>🙋‍♂️ À propos: </h2>
+
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/cyrille-morel/">Linkedin</a>
+  </li>
+</ul> 
+
+
+<h2>📫 Contact: </h2>
+
+<ul>
+  <li>
+    <a href="mailto:cyril_dev@outlook.fr">Mail</a>
+  </li>
+</ul>
+
+ <h2>🌐 Réseaux sociaux:</h2>
+ 
+<ul>
+  <li>
+    <a href="https://discord.gg/At8T9HD">Discord</a>
+  </li>
+  <li>
+    <a href="https://twitter.com/Cyril2101">Twitter</a>
+  </li>
+</ul>
