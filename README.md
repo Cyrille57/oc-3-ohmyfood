@@ -1,5 +1,5 @@
 # 📢 Projet OpenClassrooms / P3 Ohmyfood
-
+<p>28.01.2021</p>
 <p> 
   Dans le cadre de ma formation développeur web avec OpenClassrooms, différents projets sont à realiser.
 </p>
@@ -28,7 +28,7 @@
     Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
   </li>
   <li>
-    Les pages devront passer la validation W3C en <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcyrille57.github.io%2FCyrilleMorel_3_28012021%2F">HTML</a> et <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcyrille57.github.io%2FCyrilleMorel_3_28012021%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">CSS</a> sans erreur.
+    Les pages devront passer la validation W3C en <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcyrille57.github.io%2Foc-3-ohmyfood%2F">HTML</a> et <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcyrille57.github.io%2FCyrilleMorel_3_28012021%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">CSS</a> sans erreur.
   </li>
   </ul>
   
@@ -117,7 +117,7 @@ Pour cette première version, l’effet peut être apparaître au survol sur des
 <h2> Rendue </h2>
 
 <p>
-  Pour voir le livrable et le tester, c'est par <a href="https://cyrille57.github.io/CyrilleMorel_3_28012021/">ici</a>
+  Pour voir le livrable et le tester, c'est par <a href="https://cyrille57.github.io/oc-3-ohmyfood//">ici</a>
 </p>
 
 <h2>🙋‍♂️ À propos: </h2>
