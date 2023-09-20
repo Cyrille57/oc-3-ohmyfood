@@ -38,7 +38,7 @@
 
 <h2>📝 Les consignes / fonctionnalités: </h2>
 
-<h3>Page d’accueil (x1)</h3>
+<h3>Page d’accueil (x1):</h3>
 
 <ul>
   <li>
@@ -57,7 +57,7 @@
   </li>
  </ul>
     
- <h3>Pages de menu (x4).</h3>
+ <h3>Pages de menu (x4):</h3>
  
  <ul>
  <li>
@@ -75,7 +75,7 @@
  </li>
  </ul>
 
-<h3>Header</h3>
+<h3>Header:</h3>
 
 <ul>
 <li>
@@ -89,7 +89,7 @@ Sur les pages de menu, il contient en plus un bouton de retour vers la page d’
 </li>
 </ul>
 
-<h3>Footer</h3>
+<h3>Footer:</h3>
 
 <ul>
 <li>
@@ -100,7 +100,7 @@ Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.
 </li>
 </ul>
 
-<h3>Boutons</h3>
+<h3>Boutons:</h3>
 
 <ul>
 <li>
@@ -114,7 +114,7 @@ Pour cette première version, l’effet peut être apparaître au survol sur des
 </li>
 </ul>
 
-<h2> Rendue </h2>
+<h2> Rendu: </h2>
 
 <p>
   Pour voir le livrable et le tester, c'est par <a href="https://cyrille57.github.io/oc-3-ohmyfood//">ici</a>
